@@ -5,7 +5,7 @@ var WindowsBeaconManager = {
     }
 };
 
-module.exports.WindowsBeaconManager = WindowsBeaconManager;
+module.exports = WindowsBeaconManager;
 
 /*
 window.DetectBeacon = function(str, callback) {
