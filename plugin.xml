@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.ai.cordova.beacon" version="4.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+
+    <name>Windows 10 Beacon Plugin</name>
+    <description>Beacon Monitoring for Windows 10</description>
+    <license>Apache 2.0</license>
+    <repo>https://github.com/dennismosemann/cordova-windows10-beacons.git</repo>
+
+    <js-module name="WindowsBeaconManager" src="www/WindowsBeaconManager.js">
+        <clobbers target="window.WindowsBeaconManager" />
+    </js-module>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/WindowsBeaconManagerProxy.js" name="WindowsBeaconManagerProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+
+</plugin>
