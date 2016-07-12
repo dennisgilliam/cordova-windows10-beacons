@@ -7,8 +7,9 @@ var WindowsBeaconManager = {
 
 module.exports.WindowsBeaconManager = WindowsBeaconManager;
 
+/*
 window.DetectBeacon = function(str, callback) {
     cordova.exec(callback, function(err) {
         callback('Nothing to echo.');
     }, "WindowsBeaconManager", "DetectBeacon", [str]);
-};
+};*/

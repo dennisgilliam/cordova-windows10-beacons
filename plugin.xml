@@ -16,11 +16,4 @@
             <merges target="" />
         </js-module>
     </platform>
-
-    <platform name="ios">
-        <js-module src="src/windows/WindowsBeaconManagerProxy.js" name="WindowsBeaconManagerProxy">
-            <merges target="" />
-        </js-module>
-    </platform>
-
 </plugin>
