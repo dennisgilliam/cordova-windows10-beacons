@@ -1,18 +1,14 @@
 //  JavaScript
-var cordova = require('cordova'),
-    WindowsBeaconManager = require('./WindowsBeaconManager');
+var cordova = require('cordova');
 
-module.exports = {
-
-    WindowsBeaconManager: function (successCallback, errorCallback, strInput) {
-
-        var upperCase = strInput[0].toUpperCase();
-        if(upperCase != "") {
-            successCallback(upperCase);
+// in file echopluginProxy.js
+cordova.commandProxy.add("WindowsBeaconManager",{
+    echo:function(successCallback,errorCallback,strInput) {
+        if(!strInput || !strInput.length) {
+            errorCallback("Error, something was wrong with the input string. =>" + strInput);
         }
         else {
-            errorCallback(upperCase);
+            successCallback(strInput + "echo");
         }
     }
-};
-require("cordova/exec/proxy").add("WindowsBeaconManager", module.exports);
+});
