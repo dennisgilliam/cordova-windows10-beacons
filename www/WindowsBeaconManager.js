@@ -1,7 +1,7 @@
 // JavaScript
 var WindowsBeaconManager = {
-    DetectBeacon: function (successCallback, errorCallback, strInput) {
-        cordova.exec(successCallback, errorCallback, "WindowsBeaconManager", "DetectBeacon", [strInput]);
+    DetectBeacon: function (successCallback, errorCallback, beacons) {
+        cordova.exec(successCallback, errorCallback, "WindowsBeaconManager", "DetectBeacon", beacons);
     }
 };
 
