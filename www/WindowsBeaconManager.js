@@ -5,4 +5,4 @@ var WindowsBeaconManager = {
     }
 };
 
-module.exports = WindowsBeaconManager;
+module.exports.WindowsBeaconManager = WindowsBeaconManager;

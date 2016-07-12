@@ -1,18 +1,16 @@
 {
-  "name": "com.unarin.cordova.beacon",
-  "version": "4.0",
-  "description": "Proximity Beacon Monitoring and Transmission Plugin (supporting iBeacons)",
+  "name": "com.ai.cordova.beacon",
+  "version": "0.1",
+  "description": "Beacon Support for Windows 10",
   "cordova": {
-    "id": "com.unarin.cordova.beacon",
+    "id": "com.ai.cordova.beacon",
     "platforms": [
-      "ios",
-      "android",
       "windows"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dennismosemann/cordova-plugin-ibeacon.git"
+    "url": "git+https://github.com/dennismosemann/cordova-windows10-beacons.git"
   },
   "keywords": [
     "cordova",
@@ -20,14 +18,8 @@
     "beacon",
     "bluetooth",
     "le",
-    "ecosystem:cordova",
-    "cordova-ios",
-    "cordova-android"
+    "cordova-windows"
   ],
-  "author": "Peter Metz (Somogyvari) <peter.metz@unarin.com>",
+  "author": "Dennis Mosemann <dennis.mosemann@ambient-innovation.com>",
   "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/petermetz/cordova-plugin-ibeacon/issues"
-  },
-  "homepage": "https://github.com/petermetz/cordova-plugin-ibeacon"
 }
