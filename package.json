@@ -1,7 +1,7 @@
 {
   "name": "com.ai.cordova.beacon",
   "version": "0.1",
-  "description": "Beacon Support for Windows 10",
+  "description": "BluetoothLE (Beacon) Watcher for Windows 10",
   "cordova": {
     "id": "com.ai.cordova.beacon",
     "platforms": [
@@ -14,12 +14,11 @@
   },
   "keywords": [
     "cordova",
-    "ibeacon",
     "beacon",
     "bluetooth",
     "le",
     "cordova-windows"
   ],
   "author": "Dennis Mosemann <dennis.mosemann@ambient-innovation.com>",
-  "license": "Apache 2.0",
+  "license": "MIT"
 }

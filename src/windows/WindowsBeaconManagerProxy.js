@@ -1,31 +1,24 @@
-/*
 //  JavaScript
 var cordova = require('cordova');
+var WindowsBeaconManager = require('./WindowsBeaconManager');
 
-// in file echopluginProxy.js
-cordova.commandProxy.add("WindowsBeaconManager",{
-    DetectBeacon:function(successCallback,errorCallback,beacons) {
-        successCallback("echo");
+var bluetoothLEAdvertisementWatcher;
 
-
-        if(!strInput || !strInput.length) {
-            errorCallback("Error, something was wrong with the input string. =>" + strInput);
-        }
-        else {
-            successCallback(strInput + "echo");
-        }
-    }
-});
-*/
-
-//  JavaScript
-var cordova = require('cordova'),
-    WindowsBeaconManager = require('./WindowsBeaconManager');
 
 module.exports = {
 
-    DetectBeacon: function (successCallback, errorCallback, strInput) {
-        successCallback("echo");
+    startScan: function (successCallback, errorCallback, onBeaconFound) {
+        bluetoothLEAdvertisementWatcher = new Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher();
+        bluetoothLEAdvertisementWatcher.scanningMode = Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode.active;
+
+        console.log("Start scanning for beacons");
+
+        bluetoothLEAdvertisementWatcher.addEventListener("received", function(eventArgs) {
+            var macAddressAsInt64 = eventArgs.bluetoothAddress;
+            var macAddress = macAddressAsInt64.toString(16);
+            onBeaconFound(macAddress);
+        });
+        bluetoothLEAdvertisementWatcher.start();
     }
 };
 

@@ -2,8 +2,7 @@
 <plugin id="com.ai.cordova.beacon" version="4.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
     <name>Windows 10 Beacon Plugin</name>
-    <description>Beacon Monitoring for Windows 10</description>
-    <license>Apache 2.0</license>
+    <description>BluetoothLE Monitoring for Windows 10</description>
     <repo>https://github.com/dennismosemann/cordova-windows10-beacons.git</repo>
 
     <js-module name="WindowsBeaconManager" src="www/WindowsBeaconManager.js">
