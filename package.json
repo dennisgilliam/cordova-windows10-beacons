@@ -1,6 +1,6 @@
 {
   "name": "com.ai.cordova.beacon",
-  "version": "0.1",
+  "version": "1.0",
   "description": "BluetoothLE (Beacon) Watcher for Windows 10",
   "cordova": {
     "id": "com.ai.cordova.beacon",
